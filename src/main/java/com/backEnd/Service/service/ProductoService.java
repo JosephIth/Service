@@ -9,6 +9,7 @@ import com.backEnd.Service.model.Producto;
 
 import java.util.List;
 
+
 @Service
 @Transactional
 public class ProductoService {
@@ -32,8 +33,7 @@ public class ProductoService {
         productoRepository.deleteById(id);
     }
 
-    // Llama al método nuevo con @Query
     public List<Producto> findByCategoriaId(int id_categoria){
-        return productoRepository.findByCategoriaId(id_categoria);
+        return productoRepository.findByCategoria_id_categoria(id_categoria);
     }
 }
