@@ -52,7 +52,6 @@ public class DataInitializer implements CommandLineRunner {
             Usuario u = new Usuario();
             u.setCorreo_usuario("test@local.test");
             u.setNombre_usuario("Test User");
-            u.setImg_url("");
             u.setIsAdmin(false);
             u.setPassword("test123");
             usuarioService.save(u);

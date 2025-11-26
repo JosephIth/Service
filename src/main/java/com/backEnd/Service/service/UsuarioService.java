@@ -36,7 +36,6 @@ public class UsuarioService {
     public Usuario update(String correo, Usuario usuario) {
         Usuario existing = usuarioRepository.findById(correo).orElseThrow(NoSuchElementException::new);
         if (usuario.getNombre_usuario() != null) existing.setNombre_usuario(usuario.getNombre_usuario());
-        if (usuario.getImg_url() != null) existing.setImg_url(usuario.getImg_url());
         if (usuario.getIsAdmin() != null) existing.setIsAdmin(usuario.getIsAdmin());
         if (usuario.getPassword() != null && !usuario.getPassword().isEmpty()) {
             existing.setPassword(passwordEncoder.encode(usuario.getPassword()));

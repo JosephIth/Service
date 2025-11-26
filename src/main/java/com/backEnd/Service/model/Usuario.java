@@ -24,8 +24,7 @@ public class Usuario {
     @Column(length = 30, nullable = false)
     private String nombre_usuario;
 
-    @Column(length = 50, nullable = false)
-    private String img_url;
+    // img_url removed: we no longer store user images in the Usuario table
 
     @Column(name = "isAdmin", nullable = false)
     private Boolean isAdmin;
